@@ -27,8 +27,10 @@ public class CalculatorPanel extends JPanel {
         this.setDoubleBuffered(true);
         this.setFocusable(true);
 
-        bm = new ButtonManager(this);
-        im = new InputManager(this);
+        bm = new ButtonManager();
+        im = new InputManager();
+        this.add(im.bar);
+        bm.createButtons(this);
 
 
     }
